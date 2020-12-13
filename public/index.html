@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no">
+        <title>WebSocket</title>
+        <link rel="stylesheet" href="app.css">
+    </head>
 
-<head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>Browser Primer</title>
-</head>
+    <body>
+        <header>
+            <h1>Messanger</h1>
+            <span id="status">OFFLINE</span>
+        </header>
 
-<body>
-   <div id="root">
+        <main>
+            <ul id="messages"></ul>
 
-      <a id="open_modal" href="#open">Открыть окно</a>
-      <div id="modal" class="modal bounceIn">
-         <div id="close_modal">+</div>
-         <div class="modal_txt">Текст в модальном окне</div>
-      </div>
-      <script type="module">
-         import { renderPage } from "../src/index.js";
-      renderPage();
-    </script>
-</body>
+            <form id="form">
+                <label for="message">&gt;</label>
+                <input type="text" id="input" required autofocus autocomplete="off">
+            </form>
+        </main>
 
+        <script src="app.js"></script>
+    </body>
 </html>
